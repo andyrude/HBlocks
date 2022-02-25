@@ -24,7 +24,7 @@ public class Knapsack01 {
             for (int j = 0; j <= val; j++) {
                 dp[i][j] = dp[i - 1][j];
 
-                if ((j >= wt[i - 1]) && (dp[i][j] < dp[i - 1][j - wt[i - 1]] + vala[i - 1])) {
+                if ((j >= wt[i - 1]) && (dp[i][j] < dp[i ][j - wt[i - 1]] + vala[i - 1])) {
                     dp[i][j] = dp[i - 1][j - wt[i - 1]] + vala[i - 1];
                 }
             }
