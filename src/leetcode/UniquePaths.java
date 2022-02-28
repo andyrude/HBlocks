@@ -14,7 +14,6 @@ public class UniquePaths {
     }
 
     private static void getTotalNumPaths(int n, int m, int i, int j) {
-        int[][] dp = new int[ n][ m];
         if( i == n-1 && j == m - 1){
             count++;
             return;
