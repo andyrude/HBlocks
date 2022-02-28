@@ -14,11 +14,11 @@ public class UniquePaths {
     }
 
     private static void getTotalNumPaths(int n, int m, int i, int j) {
-        if( i == n-1 || j == m - 1){
+        if( i == n-1 && j == m - 1){
             count++;
             return;
         }
-        if ( i < 0 || j < 0 || i >= m || j >= n){
+        else if ( i > n - 1 || j > m - 1){
             return;
         }
         getTotalNumPaths( n, m, i + 1, j);
