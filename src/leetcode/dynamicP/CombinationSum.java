@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Try {
+public class CombinationSum {
     static ArrayList<ArrayList<Integer>> arrayList = new ArrayList<>();
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
