@@ -13,6 +13,6 @@ public class Permutations {
     }
 
     private static void getSol(int[] arr) {
-
+        ArrayList<Integer> list = new ArrayList<>();
     }
 }
