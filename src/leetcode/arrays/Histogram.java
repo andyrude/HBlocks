@@ -21,7 +21,7 @@ public class Histogram {
         for ( int i = 0; i < arr.length; i++){
             int j = i;
             if ( i == arr.length - 1){
-                rs[i] = 0;
+                rs[i] = arr.length;
                 break;
             }else {
                 while (arr[j] >= arr[i]) {
@@ -32,7 +32,7 @@ public class Histogram {
                     }
                 }
             }
-            rs[i] = j;
+            rs[i] = j ;
         }
 
         for ( int i = arr.length - 1; i >= 0; i--){
@@ -49,10 +49,10 @@ public class Histogram {
                 }
                 System.out.println(j);
             }
-            ls[i] = j;
+            ls[i] = j + 1;
         }
         for ( int i = 0; i < arr.length; i++){
-            k[i] = Math.abs( ls[i] - rs[i]  +  1) * arr[i];
+            k[i] = Math.abs( ls[i] - rs[i]  ) * arr[i];
         }
         System.out.println(Arrays.toString( ls));
         System.out.println(Arrays.toString( rs));
