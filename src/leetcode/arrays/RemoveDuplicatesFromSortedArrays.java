@@ -16,21 +16,21 @@ public class RemoveDuplicatesFromSortedArrays {
 
     private static void sol(int[] arr) {
         ArrayList<Integer> arrayList = new ArrayList<>();
-        arrayList.add( arr[0]);
-        int n = 0;
+        arrayList.add(arr[0]);
+        int n = 1;
         for ( int i = 1; i < arr.length; i++){
             if( arr[i - 1] == arr[i]){
                 if ( arr[i] == arr[i-1]){
-                    if ( i >= 2){
+                    if ( n > 1){
                         n++;
                     }else{
                         n++;
                         arrayList.add(arr[i]);
                     }
-                } else if ( arr[i] != arr[i - 1]){
-                    n = 0;
-                    arrayList.add( arr[i]);
                 }
+                }else if( arr[i] != arr[i - 1]){
+                n = 1;
+                arrayList.add( arr[i]);
             }
         }
         System.out.println( arrayList);
