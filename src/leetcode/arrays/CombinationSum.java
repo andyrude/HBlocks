@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class CombinationSum {
     static ArrayList<ArrayList<Integer>> arrayList = new ArrayList<>();
+    static ArrayList<String> arrayList2 = new ArrayList<>();
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String[] str = sc.nextLine().split(" ");
@@ -23,11 +24,16 @@ public class CombinationSum {
         if ( target == 0){
                 char[] arr2 = str.toCharArray();
                 Arrays.sort(arr2);
-                ArrayList<Integer> charList = new ArrayList<>();
-                for ( int i = 0; i < str.length(); i++){
-                    charList.add( Integer.parseInt( String.valueOf(arr2[i])));
+                String m = "";
+                for ( int i =0; i < arr2.length; i++){
+                    m = m + arr2[i];
                 }
-                if ( !arrayList.contains(arr2)){
+                if ( arrayList2.contains(m) == false){
+                    ArrayList<Integer> charList = new ArrayList<>();
+                    for ( int i = 0; i < str.length(); i++){
+                        charList.add( Integer.parseInt( String.valueOf(arr2[i])));
+                    }
+                    arrayList2.add(m);
                     arrayList.add(charList);
                 }
                 str = "";
