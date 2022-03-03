@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class RemoveDuplicatesFromSortedArrays {
+
     public static void main(String[] args) {
         Scanner sc = new Scanner( System.in);
         String[] str = sc.nextLine().split(" ");
