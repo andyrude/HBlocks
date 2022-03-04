@@ -53,8 +53,7 @@ public class Histogram {
         for ( int i = 0; i < arr.length; i++){
             k[i] = Math.abs( ls[i] - rs[i]  ) * arr[i];
         }
-        System.out.println(Arrays.toString( rs));
-        System.out.println(Arrays.toString( ls));
+
         System.out.println(Arrays.toString( k));
     }
 }
