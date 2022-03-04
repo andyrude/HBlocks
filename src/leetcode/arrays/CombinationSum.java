@@ -5,8 +5,10 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class CombinationSum {
+
     static ArrayList<ArrayList<Integer>> arrayList = new ArrayList<>();
     static ArrayList<String> arrayList2 = new ArrayList<>();
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String[] str = sc.nextLine().split(" ");
