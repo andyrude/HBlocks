@@ -59,7 +59,7 @@ public class MaximalRectangle {
                     }
                 }
             }
-            rs[i] = j - 1 ;
+            rs[i] = j  ;
         }
 
         for ( int i = arr.length - 1; i >= 0; i--){

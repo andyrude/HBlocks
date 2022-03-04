@@ -32,7 +32,7 @@ public class Histogram {
                     }
                 }
             }
-            rs[i] = j - 1 ;
+            rs[i] = j  ;
         }
 
         for ( int i = arr.length - 1; i >= 0; i--){
@@ -47,15 +47,14 @@ public class Histogram {
                     ls[i] = 0;
                     break;
                 }
-                System.out.println(j);
             }
             ls[i] = j + 1;
         }
         for ( int i = 0; i < arr.length; i++){
             k[i] = Math.abs( ls[i] - rs[i]  ) * arr[i];
         }
-        System.out.println(Arrays.toString( ls));
         System.out.println(Arrays.toString( rs));
+        System.out.println(Arrays.toString( ls));
         System.out.println(Arrays.toString( k));
     }
 }
