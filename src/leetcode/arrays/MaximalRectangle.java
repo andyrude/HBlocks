@@ -62,21 +62,21 @@ public class MaximalRectangle {
             rs[i] = j  ;
         }
 
-        for ( int i = arr.length - 1; i >= 0; i--){
+        for ( int i = arr.length ; i > 0; i--){
             int j = i;
             if ( i == 0){
-                ls[i] = 0;
+                ls[i - 1] = 0;
                 break;
             }
-            while ( arr[j] >= arr[i]){
+            while ( arr[j - 1] >= arr[i - 1]){
                 j--;
                 if ( j <= 0){
-                    ls[i] = 0;
+                    ls[i - 1] = 0;
                     break;
                 }
                 System.out.println(j);
             }
-            ls[i] = j + 1;
+            ls[i - 1] = j + 1;
         }
         for ( int i = 0; i < arr.length; i++){
             k[i] = Math.abs( ls[i] - rs[i]  ) * arr[i];
