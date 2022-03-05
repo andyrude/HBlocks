@@ -24,7 +24,7 @@ public class Problem2 {
                 map.put( arr[i], 1);
             }
         }
-
+        System.out.println( map);
         map.remove("");
         int n = 0;
         ArrayList<Integer> arrayList = new ArrayList<>( map.keySet());
