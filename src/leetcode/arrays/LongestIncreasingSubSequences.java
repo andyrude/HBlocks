@@ -28,6 +28,7 @@ public class LongestIncreasingSubSequences {
             }
             max = max > lis[i]? max: lis[i];
         }
+        System.out.println( Arrays.toString( lis));
         System.out.println(max);
     }
 }
