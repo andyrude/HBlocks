@@ -14,9 +14,9 @@ public class Problem1 {
         System.out.println( getTotalStrings( arr));
     }
 
-    private static int getTotalStrings(int[] arr) {
-        int k = 0;
-        int s = 0;
+    private static long getTotalStrings(int[] arr) {
+        long k = 0;
+        long s = 0;
         for ( int i = 1; i < arr.length; i++){
             if ( arr[i - 1] == 3 && arr[i] == 3){
                 k++;
@@ -28,13 +28,13 @@ public class Problem1 {
         System.out.println( k);
         System.out.println( s);
         if( k > 0 && s > 0){
-            return   k * s + 1;
+            return   (k * s + 1)%1000000007;
         }
-        if( k > 0 ){
-            return k + 1;
+        if( k > 0 && s == 0){
+            return (k + 1)%1000000007;
         }
        else {
-            return  s + 1;
+            return  (s + 1)%1000000007;
         }
     }
 
