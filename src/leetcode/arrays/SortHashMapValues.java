@@ -19,14 +19,16 @@ public class SortHashMapValues {
 
     private static void sortTheHashMap(HashMap<String, Integer> map) {
         ArrayList<Map.Entry< String, Integer>> list = new ArrayList< Map.Entry< String, Integer>>( map.entrySet());
+        System.out.println( list);
         Collections.sort(list, new Comparator<Map.Entry<String, Integer> >() {
+            @Override
             public int compare(Map.Entry<String, Integer> o1,
                                Map.Entry<String, Integer> o2)
             {
                 return (o1.getValue()).compareTo(o2.getValue());
             }
         });
-
+        System.out.println( list);
         HashMap<String, Integer> temp = new LinkedHashMap<String, Integer>();
         for (Map.Entry<String, Integer> aa : list) {
             temp.put(aa.getKey(), aa.getValue());
