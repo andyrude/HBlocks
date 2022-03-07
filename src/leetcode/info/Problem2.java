@@ -20,7 +20,7 @@ public class Problem2 {
                         dp[j][i+h] = dp[j][i] + 1 + dp[ j][i + h];
                     }
                     if ( j + h  < n){
-                        dp[j + h][i] = dp[j][i] + 1 + dp[ j + h][i];
+                        dp[j + h][i] = dp[j][i] + 1 + dp[j + h][i];
                     }
                     if ( i + h < n && j + h < n){
                         dp[j + h][ i + h] = dp[ j ][i] + 1 + 1 + dp[ j + h][i + h];
