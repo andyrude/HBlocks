@@ -14,16 +14,16 @@ public class Problem2 {
             Arrays.fill( dp[i], 0);
         }
         for ( int  i = 0; i < n; i++){
-            for ( int j = 0; i < n; j++){
-                for ( int h = 1; h < k; h++){
-                    if (i + h  < n) {
-                        dp[j][i+h] = dp[j][i] + 1 + dp[ j][i + h];
+            for ( int j = 0; j < n; j++){
+                for ( int h = 1; h <= k; h++){
+                    if (i + h  < n ) {
+                        dp[j][i+h] = dp[ j][ i + h] + 1;
                     }
-                    if ( j + h  < n){
-                        dp[j + h][i] = dp[j][i] + 1 + dp[j + h][i];
+                    if ( j + h  < n ){
+                        dp[j + h][i] = 1 + dp[j + h][i];
                     }
                     if ( i + h < n && j + h < n){
-                        dp[j + h][ i + h] = dp[ j ][i] + 1 + 1 + dp[ j + h][i + h];
+                        dp[j + h][ i + h] =  1 + dp[ j + h][i + h];
                     }
                 }
             }
