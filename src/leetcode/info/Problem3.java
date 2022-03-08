@@ -15,8 +15,10 @@ public class Problem3 {
 
     private static void find(int l,int n, int x, int y, String s) {
         if ( x == 0 && y == 0){
-            int ml = l - s.length();
-            count = (int) (count + Math.pow( 6, ml));
+            int ml = l - s.length() + 1;
+            System.out.println( ml);
+            System.out.println( Math.pow( 6, ml));
+            count = count + (int) ( Math.pow( 6, ml));
             return;
         }
         if( n == 0){
