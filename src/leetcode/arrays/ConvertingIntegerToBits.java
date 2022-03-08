@@ -14,7 +14,8 @@ public class ConvertingIntegerToBits {
         int id = 0;
 
         while (n > 0) {
-            binary[id++] = n % 2;
+            int k = n % 2;
+            binary[id++] = k;
             n = n / 2;
         }
 
