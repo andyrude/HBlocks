@@ -12,7 +12,7 @@ public class ValidParenthesis {
 
     private static boolean checkValPara(String str) {
         Stack<Character> stack = new Stack<>();
-        int i = 0;
+        int i ;
         for (i = 0; i < str.length(); i++) {
                 if (str.charAt(i) == '(' || str.charAt(i) == '[' || str.charAt(i) == '{') {
                     stack.push(str.charAt(i));
